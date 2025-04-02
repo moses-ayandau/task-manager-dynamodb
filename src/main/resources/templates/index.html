@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Todo Application</h1>
+        <button id="add-todo-btn" class="btn primary"><i class="fas fa-plus"></i> Add Todo</button>
+    </div>
+
+    <div class="todo-list-container">
+        <h2>Todo List</h2>
+        <div id="todo-list" class="todo-list">
+            <div class="empty-list">No todos found. Add a new one!</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="todo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add New Todo</h2>
+            <form class="todo-form">
+                <input type="hidden" id="todo-id">
+                <div class="form-group">
+                    <label for="todo-title">Title</label>
+                    <input type="text" id="todo-title" placeholder="Enter todo title" required>
+                </div>
+                <div class="form-group">
+                    <label for="todo-description">Description</label>
+                    <textarea id="todo-description" placeholder="Enter todo description"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="save-btn" class="btn primary">Add Todo</button>
+                    <button type="button" id="cancel-btn" class="btn secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Todo Item Template -->
+<template id="todo-item-template">
+    <div class="todo-item">
+        <div class="todo-header">
+            <input type="checkbox" class="todo-checkbox">
+            <h3 class="todo-title"></h3>
+            <div class="todo-actions">
+                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+            </div>
+        </div>
+        <p class="todo-description"></p>
+        <div class="todo-dates">
+            <span class="created-date"></span>
+            <span class="updated-date"></span>
+        </div>
+    </div>
+</template>
+
+<script src="/app.js"></script>
+</body>
+</html>
