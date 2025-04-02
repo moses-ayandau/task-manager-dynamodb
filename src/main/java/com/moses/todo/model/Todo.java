@@ -32,7 +32,6 @@ public class Todo {
         this.id = id;
     }
 
-    // Generate a new ID if not provided
     public static Todo create(Todo todo) {
         LocalDateTime now = LocalDateTime.now();
         return Todo.builder()
@@ -45,7 +44,6 @@ public class Todo {
                 .build();
     }
 
-    // Update an existing Todo
     public static Todo update(Todo existing, Todo updated) {
         return Todo.builder()
                 .id(existing.getId())

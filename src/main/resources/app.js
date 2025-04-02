@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTitle = document.getElementById('modal-title');
     const todoItemTemplate = document.getElementById('todo-item-template');
 
-    const API_URL = '/api/v1/todos';
+    const API_URL = '/api/todos';
 
     // Load todos on page load
     loadTodos();
